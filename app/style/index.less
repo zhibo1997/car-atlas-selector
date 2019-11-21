@@ -1,0 +1,102 @@
+@carlistwidth:300px; //右侧图集的宽度
+html,body,#root{
+    height: 100%;
+}
+.piclist {
+    width: @carlistwidth;
+    background-color: #444;
+    right: 0;
+    height: 100%;
+    position: absolute;
+
+    h2 {
+        color: #fff;
+        padding: 8%;
+    }
+
+    .typemodel {
+        span {
+            display: inline-block;
+            width: 26%;
+            line-height: 30px;
+            border: 1px solid #ddd;
+            margin-left: 5%;
+            font-size: 12px;
+            text-align: center;
+            color: #ddd;
+            cursor: pointer;
+        }
+
+        .cur {
+            background-color: #ccc;
+            color: #000;
+        }
+    }
+
+    .colormodel {
+        padding: 20px;
+
+        span {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            margin: 2%;
+            background-color: #fff;
+            border: 2px solid #444;
+        }
+
+        .cur {
+            border: 2px solid yellow;
+        }
+    }
+
+    .carpic {
+        padding: 10% 5px 10% 0;
+        overflow: hidden;
+        ul{
+            transition:all 0.7s ease 0s;
+            width: 5000%;
+            position: relative;
+            height: 100%;
+            left: 0;
+            li.picpage{
+                width: @carlistwidth;
+                float: left;
+                margin-right: 10px;
+                ul {
+                    width: @carlistwidth;
+                    overflow: hidden;
+                    li {
+                        width: 50%;
+                        box-sizing: border-box;
+                        padding: 5px 0 5px 5px;
+                        float: left;
+                        img {
+                            width: 100%;
+                            opacity: 0.4;
+                            cursor: pointer;
+                        }.cur{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        ol {
+            margin-left: 30%;
+            li{
+                width:40px;
+                height: 10px;
+                float: left;
+                background-color: skyblue;
+                cursor: pointer;
+                margin-left: 7px;
+            }.cur{
+                background-color: yellow;
+            }.hide{
+                visibility:hidden;
+            }
+        }
+    }
+}
